@@ -1,6 +1,10 @@
 .App {
   color: #404040;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 100vh;
 }
 
 .App-logo {
