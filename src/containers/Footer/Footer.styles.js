@@ -1,5 +1,3 @@
-import { findByLabelText } from "@testing-library/react";
-
 const FOOTER_PADDING = 10;
 
 const styles = {
