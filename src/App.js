@@ -1,9 +1,13 @@
 import Header from './containers/Header/Header';
+import Footer from './containers/Footer/Footer';
+import Body from './containers/Body/Body';
+
+import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      <div className="Header"><Header /></div>
       <header className="App-header">
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
         {/* <a
@@ -15,6 +19,8 @@ function App() {
           Learn
         </a> */}
       </header>
+      <Body />
+      <Footer />
     </div>
   );
 }

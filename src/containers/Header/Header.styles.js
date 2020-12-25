@@ -15,7 +15,9 @@ const styles = {
       paddingBottom: HEADER_PADDING,
       textTransform: 'uppercase',
       fontWeight: 'bold',
+
    }
+
 }
 
 export default styles;
