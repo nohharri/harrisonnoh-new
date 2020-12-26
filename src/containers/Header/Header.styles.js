@@ -2,22 +2,33 @@
 const HEADER_PADDING = 10;
 
 const styles = {
-   header: {
+   container: {
       display: 'flex',
       alignItems: 'center',
       background: '1890ff',
       height: 50,
-      color: '#404040',
-      fontSize: 30,
-      paddingLeft: HEADER_PADDING,
-      paddingRight: HEADER_PADDING,
       paddingTop: HEADER_PADDING,
       paddingBottom: HEADER_PADDING,
-      textTransform: 'uppercase',
       fontWeight: 'bold',
-
+   },
+   logo: {
+      flex: 1,
+      marginLeft: 20,
+      textAlign: 'left',
+      textTransform: 'uppercase',
+      color: '#404040',
+      fontSize: 30,
+      cursor: 'pointer',
+   },
+   navigation: {
+      flex: 0,
+      marginRight: 20,
+      fontSize: 25,
+   },
+   navigationLink: {
+      marginRight: 20,
+      cursor: 'pointer',
    }
-
 }
 
 export default styles;
