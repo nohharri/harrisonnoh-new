@@ -4,6 +4,11 @@
 
  const colors = {
      pink: '#ff644f',
+     black: '#383838',
  }
 
- export { colors }
+ const fonts = {
+    rubik: "'Rubik', sans-serif",
+ }
+
+ export { colors, fonts }

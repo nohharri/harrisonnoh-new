@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './containers/Header/Header';
 import Footer from './containers/Footer/Footer';
 import Body from './containers/Body/Body';
-import ExternalLinks from './containers/ExternalLinks/ExternalLinks';
+import Introduction from './containers/Introduction/Introduction';
 
 import './App.css';
 
@@ -11,11 +11,9 @@ class App extends React.Component {
   async getPhotos() {
     const res = await fetch('/api/photos');
     const photos = await res.json();
-    console.log(photos);
   }
 
   componentDidMount() {
-    console.log('mounted');
     this.getPhotos();
   }
 
@@ -34,7 +32,7 @@ class App extends React.Component {
             Learn
           </a> */}
         </header>
-        <ExternalLinks />
+        <Introduction />
         <Body />
         <Footer />
       </div>

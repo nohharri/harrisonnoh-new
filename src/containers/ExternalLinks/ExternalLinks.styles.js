@@ -5,10 +5,12 @@ const styles = {
         display: 'flex',
         fontSize: 40,
         color: colors.pink,
+        width: '50%',
+        margin: 'auto',
     },
     icon: {
         flex: 1,
-        padding: 50,
+        color: colors.pink,
     },
 }
 

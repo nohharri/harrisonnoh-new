@@ -1,4 +1,6 @@
 
+import { fonts } from '../../constants';
+
 const HEADER_PADDING = 10;
 
 const styles = {
@@ -28,6 +30,7 @@ const styles = {
    navigationLink: {
       marginRight: 20,
       cursor: 'pointer',
+      fontFamily: fonts.rubik,
    }
 }
 
