@@ -16,5 +16,5 @@ const style = {
  * to change colors based off its parent prop. Defaulted at gray.
  */
 export default function BigButton(props) {
-    return <button style={{...style, ...props.style}}>{props.children}</button>
+    return <button className={props.className} style={{...style, ...props.style}}>{props.children}</button>
 }
