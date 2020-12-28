@@ -8,7 +8,10 @@
  }
 
  const fonts = {
+    // Rounded, sans font
     rubik: "'Rubik', sans-serif",
+    // serif, formal font
+    frank: "'Frank Ruhl Libre', serif",
  }
 
  export { colors, fonts }

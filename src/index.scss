@@ -1,5 +1,14 @@
 /* Imports */
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre&display=swap');
+
+:root {
+  --pink: #ff644f;
+  --black: #383838;
+
+  --rubik: 'Rubik', sans-serif;
+  --frank: 'Frank Ruhl Libre', serif;
+}
 
 body {
   margin: 0;
@@ -15,3 +24,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/**
+ const colors = {
+     pink: '#ff644f',
+     black: '#383838',
+ }
+
+ const fonts = {
+    // Rounded, sans font
+    rubik: "'Rubik', sans-serif",
+    // serif, formal font
+    frank: "'Frank Ruhl Libre', serif",
+ }
+
+ export { colors, fonts }
+ */

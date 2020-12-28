@@ -1,0 +1,19 @@
+.container {
+    margin: auto;
+    margin-top: 20px;
+    width: 400px;
+}
+
+.introductionTitle {
+    font-size: 50px;
+    font-weight: bold;
+    font-family: var(--rubik);
+    margin-bottom: 10px;
+}
+
+.introductionCaption {
+    font-size: 19px;
+    font-family: var(--frank);
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
