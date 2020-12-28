@@ -1,8 +1,14 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
-import styles from './ExternalLinks.styles';
-import './ExternalLinks.css';
+import styles from './ExternalLinks.module.scss';
+
+// All social media links with associated icon.
+const links = [
+    { link: 'https://www.linkedin.com/in/nohharri', icon: faLinkedin },
+    { link: 'https://github.com/nohharri', icon: faGithub },
+    { link: 'https://twitter.com/uwurrison', icon: faTwitterSquare },
+];
 
 /**
  * Links to external websites. Currently has:
@@ -10,13 +16,15 @@ import './ExternalLinks.css';
  * - Github
  * - Twitter
  */
-export default class ExternalLinks extends React.Component {
+export default class ExternalLinks extends React.PureComponent {
     render() {
         return (
-            <div style={styles.container}>
-                <div style={styles.icon}><a target="_blank" href="https://www.linkedin.com/in/nohharri"><FontAwesomeIcon icon={faLinkedin} /></a></div>
-                <div style={styles.icon}><a target="_blank" href="https://github.com/nohharri"><FontAwesomeIcon icon={faGithub} /></a></div>
-                <div style={styles.icon}><a target="_blank" href="https://twitter.com/uwurrison"><FontAwesomeIcon icon={faTwitterSquare} /></a></div>
+            <div className={styles.container}>
+                {
+                    links.map((val, idx) => {
+                        return <div className={styles.icon}><a className={styles.link} target="_blank" href={val.link}><FontAwesomeIcon icon={val.icon} /></a></div>
+                    })
+                }
             </div>
         )
     }

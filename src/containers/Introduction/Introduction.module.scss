@@ -4,21 +4,21 @@
     width: 400px;
 }
 
-.introduction-title {
+.introductionTitle {
     font-size: 50px;
     font-weight: bold;
     font-family: var(--rubik);
     margin-bottom: 10px;
 }
 
-.introduction-caption {
+.introductionCaption {
     font-size: 19px;
     font-family: var(--frank);
     margin-bottom: 20px;
     line-height: 1.5;
 }
 
-.resume-button {
+.resumeButton {
     background-color: var(--pink);
     transition: .2s;
 
@@ -30,7 +30,7 @@
         filter: brightness(98%);
     }
 }
-.contact-me-button {
+.contactMeButton {
     transition: .2s;
 
     &:hover {

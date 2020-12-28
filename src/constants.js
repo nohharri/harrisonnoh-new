@@ -1,5 +1,6 @@
 /**
  * This file stores all the style constants in the project.
+ * TODO: Remove the css here and make it just a pure constants file.
  */
 
  const colors = {
@@ -14,4 +15,6 @@
     frank: "'Frank Ruhl Libre', serif",
  }
 
- export { colors, fonts }
+ const RESUME_LINK = 'https://drive.google.com/file/d/1WCNUlDf3cxF1W9TnQLKJ0GFUFc-18iA0/view?usp=sharing';
+
+ export { colors, fonts, RESUME_LINK }
