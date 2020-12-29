@@ -10,6 +10,7 @@ export default class Footer extends React.Component {
             <div className={styles.footer}>
                 <div className={styles.caption}>made with react&nbsp; <FontAwesomeIcon icon={faReact} />, netlify, & 💜 </div>
                 <ExternalLinks className={styles.links} />
+                <div>© 2020</div>
             </div>
         );
     }
