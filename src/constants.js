@@ -16,5 +16,6 @@
  }
 
  const RESUME_LINK = 'https://drive.google.com/file/d/1WCNUlDf3cxF1W9TnQLKJ0GFUFc-18iA0/view?usp=sharing';
+ const EMAIL = ['nohharri', '@', 'umich', '.', 'edu'];
 
- export { colors, fonts, RESUME_LINK }
+ export { colors, fonts, RESUME_LINK, EMAIL }

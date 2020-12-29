@@ -22,7 +22,16 @@ export default class ExternalLinks extends React.PureComponent {
             <div className={styles.container}>
                 {
                     links.map((val, idx) => {
-                        return <div className={styles.icon}><a className={styles.link} target="_blank" href={val.link}><FontAwesomeIcon icon={val.icon} /></a></div>
+                        return <div 
+                            key={idx} 
+                            className={styles.icon}
+                            >
+                                <a className={styles.link} 
+                                   target="_blank" 
+                                   rel="noreferrer" 
+                                   href={val.link}
+                                ><FontAwesomeIcon icon={val.icon} /></a>
+                            </div>
                     })
                 }
             </div>

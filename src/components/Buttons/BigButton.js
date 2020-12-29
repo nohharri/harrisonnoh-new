@@ -1,3 +1,5 @@
+import React from 'react';
+import Popup from 'reactjs-popup';
 import { fonts } from '../../constants';
 
 const style = {
@@ -15,6 +17,16 @@ const style = {
  * Big button that exists on the front page. Can be customized
  * to change colors based off its parent prop. Defaulted at gray.
  */
-export default function BigButton(props) {
-    return <button className={props.className} style={{...style, ...props.style}}>{props.children}</button>
+export default class BigButton extends React.PureComponent {
+    render() {
+        const { className, children, style: propsStyle } = this.props;
+
+        const rendered = this.props.popup ? 
+            <Popup overlayStyle={{background: 'rgba(0,0,0,0.5)'}} trigger={<button style={{...style, ...propsStyle}}>Contact me</button>} modal>
+                {this.props.popup}
+            </Popup> :
+            <button className={className} style={{...style, ...propsStyle}}>{children}</button>
+
+         return rendered;
+    }
 }

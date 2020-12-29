@@ -9,8 +9,8 @@ import './App.css';
 class App extends React.Component {
 
   async getPhotos() {
-    const res = await fetch('/api/photos');
-    const photos = await res.json();
+    //const res = await fetch('/api/photos');
+    //const photos = await res.json();
   }
 
   componentDidMount() {
