@@ -8,6 +8,7 @@ import { colors, RESUME_LINK } from '../../constants';
 import styles from './Introduction.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { EMAIL } from '../../constants';
+import Collage from '../../components/Collage/Collage';
 
 /**
  * Introduction of the screen featuring the buttons and 
@@ -34,6 +35,7 @@ export default class Introduction extends React.Component {
     render() {
         return (
             <div className={styles.container}>
+                <Collage />
                 <div className={styles.introductionTitle}>Hi, I'm Harrison!</div>
                 <div className={styles.introductionCaption}>I'm a software engineer, designer, and currently learning chess. I ❤️ creating intuitive user experiences. My current favorite technologies are React Native and Netlify. I am trying my best.</div>
                 

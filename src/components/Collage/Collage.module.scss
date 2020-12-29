@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+.photo {
+    flex: 1;
+    width: 100px;
+    height: 100px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 5px;
+    margin-right: 5px;
+    animation: fadeIn ease 2s;
+}
