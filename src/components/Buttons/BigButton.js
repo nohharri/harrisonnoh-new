@@ -23,7 +23,7 @@ export default class BigButton extends React.PureComponent {
 
         const rendered = this.props.popup ? 
             <Popup overlayStyle={{background: 'rgba(0,0,0,0.5)'}} trigger={<button style={{...style, ...propsStyle}}>Contact me</button>} modal>
-                {this.props.popup}
+                {close => this.props.popup(close)}
             </Popup> :
             <button className={className} style={{...style, ...propsStyle}}>{children}</button>
 

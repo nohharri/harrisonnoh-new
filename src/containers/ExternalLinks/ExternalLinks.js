@@ -18,14 +18,12 @@ const links = [
  */
 export default class ExternalLinks extends React.PureComponent {
     render() {
+        const { className: parentClassName } = this.props;
         return (
-            <div className={styles.container}>
+            <div className={styles.container + ' ' + parentClassName}>
                 {
                     links.map((val, idx) => {
-                        return <div 
-                            key={idx} 
-                            className={styles.icon}
-                            >
+                        return <div key={idx} className={styles.icon}>
                                 <a className={styles.link} 
                                    target="_blank" 
                                    rel="noreferrer" 

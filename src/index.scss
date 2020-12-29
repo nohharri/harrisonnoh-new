@@ -5,6 +5,7 @@
 :root {
   --pink: #ff644f;
   --black: #383838;
+  --gray: #dedede;
 
   --rubik: 'Rubik', sans-serif;
   --frank: 'Frank Ruhl Libre', serif;
@@ -30,6 +31,6 @@ a {
   text-decoration: inherit;
 }
 
-h1 {
+h1, h2 {
   font-family: var(--rubik);
 }

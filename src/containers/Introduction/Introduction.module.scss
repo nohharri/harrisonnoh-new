@@ -62,7 +62,8 @@
   }
 
 .popupContent {
-    width: 400px;
+    max-width: 400px;
+    min-width: 100%;
     padding: 20px;
     background-color: white;
     border-radius: 20px;
@@ -75,4 +76,15 @@
     font-weight: lighter;
 }
 
+.cross {
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.link {
+    font-size: 40px;
+    color: var(--pink);
+    width: 50%;
+}
 
