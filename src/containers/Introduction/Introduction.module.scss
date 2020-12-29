@@ -62,13 +62,14 @@
     }
   }
 
-.popupContent {
-    max-width: 400px;
-    min-width: 100%;
-    padding: 20px;
+.popupContainer {
     background-color: white;
     border-radius: 20px;
     animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
+}
+
+.popupContent {
+    padding: 20px;
 }
 
 .popupContent p {
@@ -89,3 +90,8 @@
     width: 50%;
 }
 
+@media only screen and (max-width: 600px) {
+    .popupContainer {
+      width: 100%;
+    }
+  }

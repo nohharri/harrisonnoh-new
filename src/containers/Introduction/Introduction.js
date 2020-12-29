@@ -21,13 +21,15 @@ export default class Introduction extends React.Component {
     // Doing a join here to avoid website scrapers.
     getContactPopup(close) {
         return (
-            <div className={styles.popupContent}>
-                <div onClick={close} className={styles.cross}><FontAwesomeIcon icon={faTimes} /></div>
-                <h1>Contact me</h1>
-                <p><FontAwesomeIcon icon={faEnvelope} />&nbsp;{EMAIL.join('')}</p>
-                <h2>Recruiting</h2>
-                <p><strong>Location:</strong>&nbsp;United States 🇺🇸</p>
-                <p><strong>Citizenship:</strong> US Citizen (No sponsorship required)</p>
+            <div className={styles.popupContainer}>
+                <div className={styles.popupContent}>
+                    <div onClick={close} className={styles.cross}><FontAwesomeIcon icon={faTimes} /></div>
+                    <h1>Contact me</h1>
+                    <p><FontAwesomeIcon icon={faEnvelope} />&nbsp;{EMAIL.join('')}</p>
+                    <h2>Recruiting</h2>
+                    <p><strong>Location:</strong>&nbsp;United States 🇺🇸</p>
+                    <p><strong>Citizenship:</strong> US Citizen (No sponsorship required)</p>
+                </div>
             </div>
         );
     }
