@@ -16,7 +16,21 @@ export default class Collage extends React.PureComponent {
             randomNum = randomNum + 1 < photos.length ? randomNum + 1 : 0;
         }
 
-        this.setState({ photos: photosToShow });
+        let currPhotoIdx = 0;
+        let collage = [];
+        if (photosToShow.length === 4) {
+            for (let r = 0; r < 2; r++) {
+                let row = [];
+                for (let c = 0; c < 2; c++) {
+                    let currPhoto = photosToShow[currPhotoIdx];
+                    row.push(<div className={styles.photo} key={currPhotoIdx} style={{backgroundImage: `url(${currPhoto.url})` }} />);
+                    currPhotoIdx++;
+                }
+                collage.push(<div className={styles.row} key={r}>{row}</div>);
+            }
+        }
+
+        this.setState({ photos: collage });
     }
 
     constructor() {
@@ -34,11 +48,7 @@ export default class Collage extends React.PureComponent {
         const { photos } = this.state;
         return (
             <div className={styles.container}>
-                {
-                    photos && photos.map((val, idx) => {
-                        return <div className={styles.photo} key={idx} style={{backgroundImage: `url(${val.url})` }} />
-                    })
-                }
+                {photos}
             </div>
         );
     }
