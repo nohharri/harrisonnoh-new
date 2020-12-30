@@ -1,0 +1,46 @@
+$HEADER_PADDING: 10px;
+
+.container {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding-top: $HEADER_PADDING;
+    padding-bottom: $HEADER_PADDING;
+    font-weight: bold,
+}
+
+.logo {
+    flex: 1;
+    margin-left: 20px;
+    text-align: left;
+    text-transform: uppercase;
+    color: #404040;
+    font-size: 30px;
+    cursor: pointer;
+    font-family: var(--rubik);
+}
+
+.navigation {
+    flex: 0;
+    font-size: 25px;
+}
+
+.navigationLink {
+    color: var(--gray);
+    margin-right: 20px;
+    cursor: not-allowed;
+    font-family: var(--rubik);
+}
+
+@media only screen and (max-width: 600px) {
+    .logo {
+        margin-bottom: 20px;
+    }
+    .container {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    .navigation {
+        width: 100%;
+    }
+  }
