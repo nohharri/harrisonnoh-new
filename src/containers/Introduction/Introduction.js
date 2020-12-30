@@ -41,7 +41,7 @@ export default class Introduction extends React.Component {
             <div className={styles.container}>
                 <div className={styles.column + ' ' + styles.introductionContent}>
                     <div>
-                        <img className={styles.profilePicture} src={profilePicture} />
+                        <img alt="profile" className={styles.profilePicture} src={profilePicture} />
                     </div>
                     <div className={styles.introductionTitle}>Hi, I'm Harrison!</div>
                     <div className={styles.introductionCaption}>I'm a software engineer, designer, and currently learning chess. I ❤️ creating intuitive user experiences. My current favorite technologies are React Native and Netlify. I am trying my best.</div>
