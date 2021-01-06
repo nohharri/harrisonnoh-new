@@ -1,0 +1,27 @@
+.container {
+    text-align: initial;
+    margin: auto;
+    margin-bottom: 30px;
+    width: 90%;
+}
+
+.date {
+     color: var(--pink);
+}
+
+h2 {
+    margin-bottom: -10px;
+
+    &:hover {
+        color: var(--pink);
+    }
+}
+
+.notice {
+    width: 100%;
+    font-size: var(--defaultFontSize);
+    float: left;
+    margin-bottom: 20px;
+    color: var(--pink);
+    font-family: var(--frank);
+}
