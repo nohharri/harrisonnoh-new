@@ -8,7 +8,7 @@ const links = [
     { link: 'https://www.linkedin.com/in/nohharri', icon: faLinkedin },
     { link: 'https://github.com/nohharri', icon: faGithub },
     { link: 'https://twitter.com/uwurrison', icon: faTwitterSquare },
-    { link: 'https://medium.com/@harrisonnoh', icon: faMedium },
+    { link: 'https://harrisonkolor.medium.com/', icon: faMedium },
 ];
 
 /**
