@@ -6,9 +6,12 @@
   --pink: #ff644f;
   --black: #383838;
   --gray: #dedede;
+  --light-gray: #f0f0f0;
 
   --rubik: 'Rubik', sans-serif;
   --frank: 'Frank Ruhl Libre', serif;
+
+  --defaultFontSize: 19px;
 
   --shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 }
@@ -35,4 +38,10 @@ a {
 
 h1, h2 {
   font-family: var(--rubik);
+}
+
+hr {
+  border: 1px solid var(--light-gray);
+  width: 90%;
+  margin-bottom: 30px;
 }

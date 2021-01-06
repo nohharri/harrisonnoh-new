@@ -14,7 +14,7 @@
 }
 
 .introductionCaption {
-    font-size: 19px;
+    font-size: var(--defaultFontSize);
     font-family: var(--frank);
     margin-bottom: 20px;
     line-height: 1.5;
