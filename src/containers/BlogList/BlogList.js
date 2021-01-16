@@ -43,7 +43,6 @@ export default class BlogList extends React.PureComponent {
 
         return (
             <div className={styles.container}>
-                <hr />
                 <h1>👨🏻‍💻 Posts</h1>
                 <div className={styles.notice}>These links will redirect you to Medium.com. <FontAwesomeIcon icon={faExternalLinkAlt} /></div>
                 {this.renderBlogPosts(blogPosts)}
