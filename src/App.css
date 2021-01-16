@@ -1,13 +1,21 @@
 .App {
   color: #404040;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
   min-height: 100vh;
 }
 
+.background {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
+.fakeBackground {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 1));
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
