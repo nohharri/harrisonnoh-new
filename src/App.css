@@ -1,7 +1,14 @@
+.content {
+  flex: 1;
+}
+
 .App {
   color: #404040;
   text-align: center;
   min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .background {
