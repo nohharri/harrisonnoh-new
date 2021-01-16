@@ -1,5 +1,5 @@
 import React from 'react';
-import { faPaintBrush, faCameraRetro, faCode } from '@fortawesome/free-solid-svg-icons';
+import { faCode } from '@fortawesome/free-solid-svg-icons';
 
 import styles from './Header.module.scss';
 import logo from '../../static/kolor.png';
