@@ -17,6 +17,11 @@
 .photoContainer {
     display: flex;
     transform: rotateY(-20deg);
+    transition: all 0.3s;
+}
+
+.photoContainer:hover {
+    transform: rotateY(-10deg);
 }
 
 .photo {

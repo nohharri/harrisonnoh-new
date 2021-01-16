@@ -31,10 +31,17 @@ $HEADER_PADDING: 10px;
 }
 
 .navigationLink {
-    color: var(--gray);
     margin-right: 20px;
-    cursor: not-allowed;
     font-family: var(--rubik);
+
+    &:hover {
+        color: var(--pink);
+    }
+}
+
+.disabled {
+    color: var(--gray);
+    cursor: not-allowed;
 }
 
 @media only screen and (max-width: 900px) {
