@@ -48,7 +48,7 @@ export default class Collage extends React.PureComponent {
         const { photos } = this.state;
         return (
             <div className={styles.container}>
-                {photos}
+                <div className={styles.photoContainer}>{photos}</div>
             </div>
         );
     }
