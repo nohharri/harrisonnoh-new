@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import Media from 'react-media';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { MEDIA_QUERIES } from '../../constants';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styles from './NavigationLink.module.scss';
 
 export default class NavigationLink extends React.PureComponent {
