@@ -22,12 +22,7 @@ class App extends React.Component {
         <div className="App">
           <Switch>
 
-            <Route path="/code">
-              <div className="content">
-                <Header />
-                <Code />
-              </div>
-            </Route>
+            <Route path="/code" component={Code} />
 
             <Route path="/">
               <Parallax bgImage={background} strength={300} className="background">

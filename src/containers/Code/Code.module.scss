@@ -2,3 +2,34 @@
 .container {
     flex: 1;
 }
+
+.navigation {
+
+}
+
+.navigationButton {
+    display: inline-block;
+    padding: .8em 1em .8em 1em;
+    box-shadow: var(--shadow);
+    border-radius: 1em;
+    margin-left: 10px;
+    width: 200px;
+    text-align: initial;
+    border: 1px solid var(--light-gray);
+    cursor: pointer;
+    transition: all .3s;
+
+    &:hover {
+        color: white;
+        background-color: var(--pink);
+    }
+
+    p {
+        font-family: var(--frank);
+    }
+}
+
+.active {
+    color: white;
+    background-color: var(--pink);
+}
