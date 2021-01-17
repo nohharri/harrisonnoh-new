@@ -2,7 +2,6 @@ import React from 'react';
 import BigButton from '../../components/Buttons/BigButton';
 import ExternalLinks from '../ExternalLinks/ExternalLinks';
 import { faGoogleDrive } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { colors, RESUME_LINK } from '../../constants';
 import styles from './Introduction.module.scss';
@@ -26,7 +25,7 @@ export default class Introduction extends React.Component {
                 <div className={styles.popupContent}>
                     <div onClick={close} className={styles.cross}><FontAwesomeIcon icon={faTimes} /></div>
                     <h1>Contact me</h1>
-                    <p><FontAwesomeIcon icon={faEnvelope} />&nbsp;{EMAIL.join('')}</p>
+                    <p><strong>Email:</strong> {EMAIL.join('')}</p>
                     <h2>Recruiting</h2>
                     <p><strong>Location:</strong>&nbsp;Seattle, United States 🇺🇸</p>
                     <p><strong>Relocation:</strong> Open, West Coast preferred</p>
