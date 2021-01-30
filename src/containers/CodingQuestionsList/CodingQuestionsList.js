@@ -25,9 +25,10 @@ export default class CodingQuestionsList extends React.Component {
 
         for (const [index, value] of problems.entries()) {
             const { name, html_url } = value;
+            const cleanedName = name.replace('.md', '').replaceAll('-', ' ');
             renderedProblems.push(
                 <div key={index}>
-                    <h3><a href={html_url}>{name}</a></h3>
+                    <h3><a href={html_url}>{cleanedName}</a></h3>
                 </div>
             );
         }

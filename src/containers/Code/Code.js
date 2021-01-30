@@ -3,6 +3,7 @@ import { NavLink, Route, Switch } from 'react-router-dom';
 import BlogList from '../BlogList/BlogList';
 import Header from '../Header/Header';
 import CodingQuestionsList from '../CodingQuestionsList/CodingQuestionsList';
+import Practice from '../Practice/Practice';
 import styles from './Code.module.scss';
 
 export default class Code extends React.Component {
@@ -22,9 +23,14 @@ export default class Code extends React.Component {
                         <h2>Coding Interview</h2>
                         <p>Ds and algos.</p>
                     </NavLink>
+                    <NavLink to={match.url + '/practice'} activeClassName={styles.active} className={styles.navigationButton}>
+                        <h2>Practice</h2>
+                        <p>Time yourself!</p>
+                    </NavLink>
                 </div>
 
                 <Switch>
+                    <Route path={match.url + '/practice'} component={Practice} />
                     <Route path={match.url + '/algorithms'} component={CodingQuestionsList} />
                     <Route path={match.url} component={BlogList} />
                 </Switch>

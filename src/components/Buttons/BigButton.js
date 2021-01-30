@@ -8,13 +8,13 @@ import styles from './BigButton.module.scss';
  */
 export default class BigButton extends React.PureComponent {
     render() {
-        const { className, children, style: propsStyle } = this.props;
+        const { className, children, style: propsStyle, onClick } = this.props;
 
         const rendered = this.props.popup ? 
             <Popup overlayStyle={{background: 'rgba(0,0,0,0.5)'}} trigger={<button className={styles.container + ' ' + className}>Contact me</button>} modal>
                 {close => this.props.popup(close)}
             </Popup> :
-            <button className={styles.container + ' ' + className} style={propsStyle}>{children}</button>
+            <button onClick={onClick} className={styles.container + ' ' + className} style={propsStyle}>{children}</button>
 
          return rendered;
     }
