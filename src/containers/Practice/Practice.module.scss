@@ -1,0 +1,74 @@
+.timerCircle {
+    fill: none;
+    stroke: none;
+}
+
+.path {
+    stroke-width: 7px;
+    stroke: var(--light-gray);
+}
+
+.container {
+    margin: auto;
+    text-align: center;
+    width: 300px;
+    margin-top: 20px;
+}
+
+.timerContainer {
+    position: relative;
+    height: 300px;
+    width: 300px;
+}
+
+.label {
+    position: absolute;
+    /* Size should match the parent container */
+    width: 300px;
+    height: 300px;
+    /* Keep the label aligned to the top */
+    top: 0;
+    /* Create a flexible box that centers content vertically and horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Sort of an arbitrary number; adjust to your liking */
+    font-size: 60px;
+}
+
+.warning {
+    margin-top: 20px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.timerButton {
+    background-color: var(--pink);
+    color: white;
+}
+
+.pathRemaining {
+    /* Just as thick as the original ring */
+    stroke-width: 7px;
+    /* Rounds the line endings to create a seamless circle */
+    stroke-linecap: round;
+    /* Makes sure the animation starts at the top of the circle */
+    transform: rotate(90deg);
+    transform-origin: center;
+    /* One second aligns with the speed of the countdown timer */
+    transition: 1s linear all;
+    /* Allows the ring to change color when the color value updates */
+    stroke: currentColor;
+  }
+  
+  .base-timer__svg {
+    /* Flips the svg and makes the animation to move left-to-right */
+    transform: scaleX(-1);
+  }
+
+  .button {
+      margin-right: 5px;
+  }

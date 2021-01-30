@@ -7,8 +7,8 @@ exports.handler = function instagram(event, context, callback) {
   const userId = '17841412370746239';
   const fields = 'id,caption,media_url,permalink';
   const token = process.env.INSTAGRAM_ACCESS_TOKEN;
-  const limit = 5;
-  const url = `${endpoint}/${userId}/media/?fields=${fields}&access_token=${token}&count=${limit}`;
+  const limit = 10;
+  const url = `${endpoint}/${userId}/media/?fields=${fields}&access_token=${token}&count=${1000}`;
 
   axios
     .get(url)
