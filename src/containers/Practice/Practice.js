@@ -3,7 +3,7 @@ import BigButton from '../../components/Buttons/BigButton';
 import styles from './Practice.module.scss';
 
 // Start with an initial value of 20 seconds
-const TIME_LIMIT_DEFAULT = 30;
+const TIME_LIMIT_DEFAULT = 30 * 60;
 const TIME_LIMIT_20 = 20 * 60;
 const TIME_LIMIT_40 = 40 * 60;
 
