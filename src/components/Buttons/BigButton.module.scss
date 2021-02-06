@@ -8,4 +8,13 @@
     color: var(--black);
     font-family: var(--rubik);
     box-shadow: var(--shadow);
+    transition: all 0.2s;
+    
+    &:hover {
+        filter: brightness(104%);
+    }
+
+    &:active {
+        filter: brightness(95%);
+    }
 }

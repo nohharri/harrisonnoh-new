@@ -1,10 +1,9 @@
 import React from 'react';
 import BigButton from '../../components/Buttons/BigButton';
 import styles from './Practice.module.scss';
-import bellSound from '../../static/audio/bell.wav';
 
 // Start with an initial value of 20 seconds
-const TIME_LIMIT_DEFAULT = 30 * 60;
+const TIME_LIMIT_DEFAULT = 30;
 const TIME_LIMIT_20 = 20 * 60;
 const TIME_LIMIT_40 = 40 * 60;
 
@@ -61,7 +60,6 @@ export default class Practice extends React.Component {
 
         this.timerInterval = null;
 
-        this.bellSound = new Audio(bellSound);
     }
 
     onTimerClicked = () => {
@@ -69,7 +67,6 @@ export default class Practice extends React.Component {
         
         switch(timerState) {
             case TIMER_STATE.IDLE:
-                this.bellSound.play();
                 this.setState({ timerState: TIMER_STATE.RUNNING });
                 this.startTimer();
                 break;
@@ -125,7 +122,6 @@ export default class Practice extends React.Component {
     onTimePressed = (time) => {
         this.setState({ timerState: TIMER_STATE.IDLE });
         this.resetTimer(time);
-        //this.setState({ timeLeft: time });
     }
 
     render() {
@@ -139,7 +135,10 @@ export default class Practice extends React.Component {
             THREE_THIRDS: timeLimit - (timeLimit / 3),
         }
 
-        if (timeLeft > TIMER_VALUE.THREE_THIRDS) {
+        if (timeLeft === timeLimit) {
+            color = PATH_COLOR.GREEN;
+            warning = "";
+        } else if (timeLeft > TIMER_VALUE.THREE_THIRDS) {
             color = PATH_COLOR.GREEN;
             warning = TIMER_WARNING.THREE_THIRDS;
         } else if (timeLeft > TIMER_VALUE.TWO_THIRDS) {
@@ -152,6 +151,7 @@ export default class Practice extends React.Component {
 
         return (
             <div>
+                <h1>🏀 Practice</h1>
                 <p>Timer for practicing coding interviews.</p>
                 <BigButton className={styles.timerButton + ' ' + styles.button} onClick={this.onTimerClicked}>{timerButtonVal}</BigButton>
                 <BigButton className={styles.button} onClick={() => this.onTimePressed(TIME_LIMIT_20)}>20m</BigButton>
