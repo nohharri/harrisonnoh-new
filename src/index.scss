@@ -4,6 +4,7 @@
 
 :root {
   --pink: #ff644f;
+  --light-pink: #ffa194;
   --black: #383838;
   --gray: #dedede;
   --light-gray: #f0f0f0;
@@ -14,6 +15,10 @@
   --defaultFontSize: 19px;
 
   --shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+::selection {
+  background: var(--light-pink);
 }
 
 body {
@@ -34,6 +39,10 @@ code {
 a {
   color: inherit;
   text-decoration: inherit;
+}
+
+li {
+  font-family: var(--frank);
 }
 
 h1, h2 {

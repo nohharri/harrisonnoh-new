@@ -1,0 +1,36 @@
+.container {
+    margin: auto;
+    padding: 40px;
+    max-width: 800px;
+
+    h1 {
+        text-align: center;
+    }
+
+    a {
+        color: var(--pink);
+        text-decoration: underline;
+    }
+
+    li {
+        text-align: initial;
+        font-size: 20px;
+        line-height: 1.7;
+    }
+
+    p {
+        font-size: 20px;
+        line-height: 1.7;
+        text-align: initial;
+    }
+
+    pre {
+        margin-top: 20px;
+        border-radius: 10px;
+        text-align: initial;
+    }
+
+    code { 
+        margin-top: 400px;
+    }
+}

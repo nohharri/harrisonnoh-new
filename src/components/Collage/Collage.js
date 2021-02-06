@@ -7,8 +7,6 @@ export default class Collage extends React.PureComponent {
         const res = await fetch('/api/photos');
         const photos = await res.json();
 
-        console.log(photos);
-
         // Gets four random numbers
         let randomNum = Math.floor(Math.random() * photos.length);
 
