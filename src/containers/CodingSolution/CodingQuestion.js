@@ -12,7 +12,6 @@ const renderers = {
     }
 }
 
-
 export default class CodingQuestion extends React.Component {
 
     constructor(props) {
@@ -48,11 +47,20 @@ export default class CodingQuestion extends React.Component {
         });
     }
 
+    transformImageUri = (uri) => {
+        const { markdownUrl: { downloadUrl } } = this.state;
+        return downloadUrl + '/' + uri;
+    }
+
     render() {
         const { markdownBody } = this.state;
         return (
             <div>
-                <ReactMarkdown renderers={renderers} className={styles.container} children={markdownBody} />
+                <ReactMarkdown 
+                    renderers={renderers} 
+                    className={styles.container} 
+                    children={markdownBody}
+                    transformImageUri={this.transformImageUri} />
             </div>
         )
     }

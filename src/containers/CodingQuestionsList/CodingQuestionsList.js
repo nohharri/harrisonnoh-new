@@ -3,6 +3,7 @@ import { NavLink, Route, Switch } from 'react-router-dom';
 import CodingQuestion from '../CodingSolution/CodingQuestion';
 
 const GITHUB_URL = 'https://api.github.com/repos/nohharri/software-engineering-prep/contents/problems';
+const GITHUB_DOWNLOAD_URL = 'https://raw.githubusercontent.com/nohharri/software-engineering-prep/master/problems';
 
 export default class CodingQuestionsList extends React.Component {
 
@@ -39,7 +40,8 @@ export default class CodingQuestionsList extends React.Component {
                         <NavLink to={{
                             pathname: match.url + '/' + name,
                             state: {
-                                markdownUrl: GITHUB_URL + '/' + name
+                                markdownUrl: GITHUB_URL + '/' + name,
+                                downloadUrl: GITHUB_DOWNLOAD_URL + '/' + name,
                             }
                             }}>
                             <h3 onClick={(name) => { this.setState({problemPath: name}) }}>{cleanedName}</h3>   
