@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink, Route, Switch } from 'react-router-dom';
 import CodingQuestion from '../CodingSolution/CodingQuestion';
+import styles from './CodingQuestionsList.module.scss';
 
 const GITHUB_URL = 'https://api.github.com/repos/nohharri/software-engineering-prep/contents/problems';
 const GITHUB_DOWNLOAD_URL = 'https://raw.githubusercontent.com/nohharri/software-engineering-prep/master/problems';
@@ -26,40 +27,50 @@ export default class CodingQuestionsList extends React.Component {
         });
     }
 
-    render() {
-        const { match } = this.props;
-        const { problems = [] } = this.state;
+    getRenderedList = (url, downloadUrl, problems = []) => {
         const renderedProblems = [];
+        const { match } = this.props;
 
         for (const [index, value] of problems.entries()) {
             const { name } = value;
             const cleanedName = name.replaceAll('-', ' ');
-            if (!cleanedName.includes('.md')) {
+            //if (!cleanedName.includes('.md')) {
                 renderedProblems.push(
                     <div key={index}>
-                        <NavLink to={{
+                        <NavLink className={styles.problem} to={{
                             pathname: match.url + '/' + name,
                             state: {
-                                markdownUrl: GITHUB_URL + '/' + name,
-                                downloadUrl: GITHUB_DOWNLOAD_URL + '/' + name,
+                                markdownUrl: url + '/' + name,
+                                downloadUrl: downloadUrl + '/' + name,
                             }
                             }}>
-                            <h3 onClick={(name) => { this.setState({problemPath: name}) }}>{cleanedName}</h3>   
+                            <h3 className={styles.problem} onClick={(name) => { this.setState({problemPath: name}) }}>{cleanedName}</h3>   
                         </NavLink>
                     </div>
                 );
-            }
+            //}
         }
+
+        return renderedProblems;
+    }
+
+    render() {
+        const { match } = this.props;
+        const { problems = [] } = this.state;
+        
+        const problemList = this.getRenderedList(GITHUB_URL, GITHUB_DOWNLOAD_URL, problems);
 
         let problemComponent = function() { return (
             <div>
                 <h1>💻 Coding Problems</h1>
-                {renderedProblems}
+                <div className={styles.problemListContainer}>
+                    {problemList}
+                </div>
             </div>
         ) }
 
         return (
-            <div>
+            <div className={styles.container}>
                 <Switch>
                     <Route path={match.url + '/*' } component={CodingQuestion} />
                     <Route path={match.url} component={problemComponent} />
