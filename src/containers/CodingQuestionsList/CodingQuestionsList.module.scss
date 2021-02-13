@@ -4,8 +4,26 @@
     }
 }
 
+.problemContainer {
+    font-weight: bold;
+    padding: 10px;
+
+    p {
+        font-family: var(--rubik);
+        margin: 0;
+    }
+}
+
+.problemContainer:nth-child(odd) {
+    background-color: var(--light-blue);
+}
+
 .problemListContainer {
     text-align: left;
+}
+
+.codingQuestionsListContainer:nth-child(1) {
+    background-color: red;
 }
 
 .container {

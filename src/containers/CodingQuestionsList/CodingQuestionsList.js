@@ -36,15 +36,15 @@ export default class CodingQuestionsList extends React.Component {
             const cleanedName = name.replaceAll('-', ' ');
             //if (!cleanedName.includes('.md')) {
                 renderedProblems.push(
-                    <div key={index}>
-                        <NavLink className={styles.problem} to={{
+                    <div className={styles.problemContainer} key={index}>
+                        <NavLink to={{
                             pathname: match.url + '/' + name,
                             state: {
                                 markdownUrl: url + '/' + name,
                                 downloadUrl: downloadUrl + '/' + name,
                             }
                             }}>
-                            <h3 className={styles.problem} onClick={(name) => { this.setState({problemPath: name}) }}>{cleanedName}</h3>   
+                            <p onClick={(name) => { this.setState({problemPath: name}) }}>{cleanedName}</p>   
                         </NavLink>
                     </div>
                 );
