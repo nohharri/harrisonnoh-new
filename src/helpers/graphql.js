@@ -13,6 +13,9 @@ export default async function getGraphQL(query) {
         .then(res => {
             const { data = {} } = res;
             return data;
+        })
+        .catch(err => {
+            console.log(err);
         });
     return res;
 }
