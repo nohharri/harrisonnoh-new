@@ -1,0 +1,54 @@
+.container {
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.iconContainer {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--pink);
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 5px;
+    display: flex;
+
+    :hover > .plane {
+        animation: 
+            move 2s 1,
+            move2 2s 2s infinite, 
+    }
+}
+
+@keyframes move {
+    from { left: 20px; }
+    to { left: 80px; }
+}
+
+@keyframes move2 {
+    from { left: -10px; }
+    to { left: 100px; }
+}
+
+.icon {
+    flex: 1;
+    display: inline;
+    font-size: 30px;
+    color: var(--pink);
+    width: 100%;
+    height: 100%;
+}
+
+.plane {
+    margin-top: 10px;
+    position: absolute;
+    left: 15px;
+    top: 0px;
+}
+
+.iconDescription {
+    margin-top: 5px;
+    font-size: 20px;
+    font-family: var(--frank);
+}
