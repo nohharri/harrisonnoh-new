@@ -7,6 +7,7 @@ import Header from '../Header/Header';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlane } from '@fortawesome/free-solid-svg-icons';
 import styles from './Home.module.scss';
+import NavigationLink from '../../components/NavigationLink/NavigationLink';
 
 export default class Home extends React.Component {
     render() {
@@ -19,7 +20,7 @@ export default class Home extends React.Component {
                     </div>
                 </Parallax>
                 <div className={styles.container}>
-                    <a href="/travel">
+                    <NavigationLink link="/travel">
                         <div className={styles.iconContainer}>
                             <div className={styles.icon}>
                                 <span className={styles.plane}>
@@ -28,7 +29,7 @@ export default class Home extends React.Component {
                             </div>
                         </div>
                         <div className={styles.iconDescription}>Travel</div>
-                    </a>
+                    </NavigationLink>
                 </div>
                 <BlogList />
             </Fragment>
