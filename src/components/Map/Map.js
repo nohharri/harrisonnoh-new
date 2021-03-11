@@ -8,7 +8,7 @@ import styles from './Map.module.scss';
 export default function Map(props) {
     const { src } = props;
     return (
-        <iframe className={styles.container} src={src} height="300" style={{border:0}} allowFullScreen="" loading="lazy"></iframe>
+        <iframe title={src} className={styles.container} src={src} height="300" style={{border:0}} allowFullScreen="" loading="lazy"></iframe>
     )
 }
 
