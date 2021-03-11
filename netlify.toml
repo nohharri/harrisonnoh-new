@@ -6,7 +6,7 @@
     status = 200
 [[redirects]]
     from = "/express/*"
-    to = "https://frosty-roentgen-fb50ad.netlify.app/.netlify/functions/server"
+    to = "https://harrisonnoh-backend.netlify.app/.netlify/functions/server"
     status = 200
     force = true
     headers = {X-From = "Netlify"}
