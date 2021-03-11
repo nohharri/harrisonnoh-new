@@ -5,6 +5,12 @@
     to = "/.netlify/functions/:splat"
     status = 200
 [[redirects]]
+    from = "/express/*"
+    to = "https://frosty-roentgen-fb50ad.netlify.app/.netlify/functions/server"
+    status = 200
+    force = true
+    headers = {X-From = "Netlify"}
+[[redirects]]
     from = "/*"
     to = "/index.html"
     status = 200

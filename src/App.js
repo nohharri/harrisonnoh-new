@@ -1,10 +1,7 @@
 import React from 'react';
-import Header from './containers/Header/Header';
 import Footer from './containers/Footer/Footer';
-import Introduction from './containers/Introduction/Introduction';
-import BlogList from './containers/BlogList/BlogList';
-import background from './static/mountain.jpg';
 import Code from './containers/Code/Code';
+import Travel from './containers/Travel/Travel';
 import {
   BrowserRouter as Router,
   Switch,
@@ -12,7 +9,7 @@ import {
 } from "react-router-dom";
 
 import './App.css';
-import { Parallax } from 'react-parallax';
+import Home from './containers/Home/Home';
 
 class App extends React.Component {
 
@@ -21,17 +18,10 @@ class App extends React.Component {
       <Router>
         <div className="App">
           <Switch>
-
             <Route path="/code" component={Code} />
-
+            <Route path="/travel" component={Travel} />
             <Route path="/">
-              <Parallax bgImage={background} strength={300} className="background">
-                <div className="fakeBackground">
-                  <Header />
-                  <Introduction />
-                </div>
-              </Parallax>
-              <BlogList />
+              <Home />
             </Route>
             
           </Switch>
