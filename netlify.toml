@@ -6,7 +6,11 @@
     status = 200
 [[redirects]]
     from = "/express/*"
-    to = "https://harrisonnoh-backend.netlify.app/.netlify/functions/server"
+    to = "https://harrisonnoh-backend.netlify.app/"
     status = 200
     force = true
-    headers = {X-From = "Netlify"}
+    headers = { X-From = "Netlify", Access-Control-Allow-Origin = "*" }
+[[redirects]]
+    from = "/*"
+    to = "/index.html"
+    status = 200

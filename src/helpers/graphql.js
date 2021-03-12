@@ -6,7 +6,12 @@ export default async function getGraphQL(query) {
     const res = 
         await fetch('/express', {
             method: 'POST',
-            headers: { 'Content-type': 'application/json' },
+            headers: { 
+                'Content-type': 'application/json',
+                'X-From': 'Netlify',
+                'Access-Control-Allow-Origin': '*',
+                'Accept': "/",
+            },
             body: JSON.stringify({ query })
         })
         .then(res => res.json())
